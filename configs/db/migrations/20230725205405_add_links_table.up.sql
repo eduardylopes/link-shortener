@@ -1,0 +1,6 @@
+CREATE TABLE "links" (
+  "id" SERIAL PRIMARY KEY,
+  "url" VARCHAR(255) NOT NULL,
+  "code" VARCHAR(6) NOT NULL,
+  "created_at" TIMESTAMP NOT NULL DEFAULT NOW()
+)
