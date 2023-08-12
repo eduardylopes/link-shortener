@@ -2,6 +2,8 @@
 
 This is a simple API in Golang that accepts a URL in the query parameter and returns a shortened link that will redirect the user to the original URL.
 
+![Diagram](https://user-images.githubusercontent.com/60992933/260232763-0ca250b0-da77-4d77-adb8-5b8acb7d1212.png)
+
 ## Prerequisites
 
 To run the project, you need to have the following tools installed on your system:
@@ -24,13 +26,19 @@ To run the project, you need to have the following tools installed on your syste
    https://go.dev
    ```
 
-3. Initialize the Postgres database container:
+3. Install Make in your machine, and follow the instruction in the following url:
+
+   ```bash
+   https://www.gnu.org/software/make/
+   ```
+
+4. Initialize the Postgres database container:
 
    ```bash
    make postgresinit
    ```
 
-4. Add environment variables below to your environment:
+5. Add environment variables below to your environment:
 
    ```bash
    # Your base URL
@@ -40,19 +48,19 @@ To run the project, you need to have the following tools installed on your syste
    DATABASE_URL=
    ```
 
-5. Initialize the Postgres database container:
+6. Initialize the Postgres database container:
 
    ```bash
    make createdb
    ```
 
-6. Run the database migrations:
+7. Run the database migrations:
 
    ```bash
    make migrateup
    ```
 
-7. Finally, run the API locally:
+8. Finally, run the API locally:
    ```bash
    make run
    ```
